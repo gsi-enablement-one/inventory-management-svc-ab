@@ -3,7 +3,7 @@ global:
   tlsSecretName: sms-test-cluster
 
 inventory-management-svc-ab:
-  replicaCount: 1
+  replicaCount: 3
 
   ingress:
     enabled: true
