@@ -2,8 +2,8 @@ FROM gradle:jdk11 AS builder
 
 WORKDIR /home/gradle
 COPY . .
-RUN ./gradlew assemble --no-daemon
-RUN ./bin/copy-jar.sh /home/gradle/build/libs
+RUN ./gradlew assemble copyJarToServerJar --no-daemon
+#RUN ./bin/copy-jar.sh /home/gradle/build/libs
 
 FROM registry.access.redhat.com/ubi8/ubi:8.1
 
